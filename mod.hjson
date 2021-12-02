@@ -1,0 +1,7 @@
+name: "hp"
+displayName: "[cyan]Hyper Processor\n"
+author: "[red]Bergiu"
+main: "hyper.HyperProcessor"
+"description": "Adds faster and better logic blocks",
+version: 1.0
+minGameVersion: 126
