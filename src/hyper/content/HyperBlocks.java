@@ -36,17 +36,27 @@ public class HyperBlocks implements ContentList{
     public static Block
 
     //logic
-    hyperHyperProcessor;
+    hyperHyperProcessor, hyperMemoryBank;
 
     @Override
     public void load() {
         hyperHyperProcessor = new LogicBlock("hyper-hyper-processor"){{
-            requirements(Category.logic, with(Items.copper, 90, Items.lead, 50, Items.silicon, 50));
+            requirements(Category.logic, BuildVisibility.sandboxOnly, with());
 
-            instructionsPerTick = 200000;
+            instructionsPerTick = 100000;
 
             size = 1;
+            alwaysUnlocked = true;
         }};
+
+        hyperMemoryBank = new MemoryBlock("hyper-memory-bank"){{
+            requirements(Category.logic, BuildVisibility.sandboxOnly, with());
+
+            memoryCapacity = 65536;
+            size = 2;
+            alwaysUnlocked = true;
+        }};
+
 
     }
 }
